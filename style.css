@@ -1,0 +1,412 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #D2D7D3;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 1em 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.content-section {
+    padding-top: 80px; /* Adjust this value to the height of your header */
+}
+
+
+header .container, footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 1em;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 2em;
+    font-family: 'Brush Script MT', cursive;
+    margin: -8px;
+    margin-left: -80px;
+}
+
+.portfolio-name .highlight {
+    color: #ff6347;
+}
+
+.typewriter .highlight {
+    color: orangered;
+}
+
+.nav-links {
+    margin-right: -90px;
+}
+
+header nav ul, footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li, footer nav ul li {
+    margin: 0 0.5em;
+    position: relative;
+}
+
+header nav ul li a, footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover, footer nav ul li a:hover {
+    color: #ff6347;
+}
+
+header nav ul li::after, footer nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ff6347;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+header nav ul li:hover::after, footer nav ul li:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+section {
+    display: none;
+    padding: 5em 2em 2em 2em;
+    margin: 2em auto;
+    max-width: 1050px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    min-height: calc(100vh - 160px); /* To account for the header and footer height */
+}
+
+section.active {
+    display: block;
+}
+
+section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    margin-bottom: 0.5em;
+}
+
+#about {
+    background-color: lightcyan;
+}
+
+#about .btn {
+    margin-bottom: -500px;
+}
+
+#projects {
+    background-color: lightcyan;
+}
+
+#experience {
+    background-color: lightcyan;
+}
+
+#skills {
+    background-color: lightcyan;
+}
+
+#contact {
+    background-color: lightcyan;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    height: 440px;
+}
+
+.project, .experience {
+    width: 45%;
+    height: auto;
+    margin-bottom: 1em;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience {
+    width: 60%; /* Increase width of experience container */
+    margin: auto; /* Align to center */
+    height: 480px; /* Adjust height to fit content */
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+}
+
+.project:hover, .experience:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn:hover {
+    background-color: #ff6347;
+    transform: translate(-50%, -3px);
+}
+
+#home {
+    background-color: #1a1a2e;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 160px);
+    padding: 0;
+    margin-top: 93px;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    margin-left: 60px;
+    text-align: center;
+    
+}
+
+.home-text {
+    flex: 1;
+    margin-top: -50px;
+    padding-right: 2em;
+}
+
+.home-text .welcome-text {
+    color: #ffc107;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.home-text h2 {
+    font-size: 2.5em;
+    margin: 0.5em 0;
+}
+
+.home-text p {
+    margin-bottom: 3em;
+}
+
+.home-text .btn {
+    margin: 130px -220px;
+    background-color: #ffc107;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    
+}
+
+.home-text .btn:hover {
+    background-color: #ff6347;
+    transform: translateY(-3px);
+}
+
+.home-image {
+    flex: 1;
+    overflow: hidden; /* Ensures the image doesn't overflow its container */
+    margin-top: 20px;
+}
+
+.home-image img {
+    max-width: 50%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-image img:hover {
+    transform: scale(1.05); /* Scales the image up slightly */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
+}
+
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button[type="submit"] {
+    padding: 0.5em 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff6347;
+}
+
+footer {
+    padding: 0.45em 0;
+    margin-top: -5px;
+}
+
+footer p {
+    margin: 0;
+    margin-left: -100px;
+    font-size: 0.9em;
+    color: #ccc;
+    text-align: center;
+}
+
+footer nav ul {
+    justify-content: center;
+    margin-right: -100px;
+    
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 0.9em;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 1em;
+}
+
+.skill {
+    flex: 1;
+    min-width: 45%;
+    max-width: 45%;
+    height: 200px;
+    margin-bottom: 1em;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill i {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #ff6347;
+}
+
+.skill p {
+    margin: 0;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Typewriting effect */
+.typewriter {
+    display: inline-block;
+    font-family: 'Brush Script MT', cursive;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid rgb(224, 255, 233);
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+    animation-iteration-count: infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orangered; }
+}
