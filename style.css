@@ -7,7 +7,9 @@ body {
     color: #333;
     scroll-behavior: smooth;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 header, footer {
     background-color: #333;
     color: #fff;
@@ -28,7 +30,7 @@ header {
 }
 
 .content-section {
-    padding-top: 80px; /* Adjust this value to the height of your header */
+    padding-top: 90px; /* Adjust this value to the height of your header */
 }
 
 
@@ -102,13 +104,13 @@ header nav ul li:hover::after, footer nav ul li:hover::after {
 }
 
 section {
-    display: none;
+    display: block;
     padding: 5em 2em 2em 2em;
-    margin: 2em auto;
+    margin: 1em auto;
     max-width: 1050px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    min-height: calc(100vh - 160px); /* To account for the header and footer height */
+    min-height: calc(100vh - 130px); /* To account for the header and footer height */
 }
 
 section.active {
@@ -221,9 +223,9 @@ section ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 160px);
+    height: calc(100vh - 110px);
     padding: 0;
-    margin-top: 93px;
+    margin-top: 69px;
 }
 
 .home-content {
@@ -257,7 +259,7 @@ section ul li {
 }
 
 .home-text .btn {
-    margin: 130px -220px;
+    margin: 110px -220px;
     background-color: #ffc107;
     color: #333;
     text-decoration: none;
@@ -329,9 +331,16 @@ button[type="submit"]:hover {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
     padding: 0.45em 0;
-    margin-top: -5px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure the footer stays above other content */
 }
+
 
 footer p {
     margin: 0;
