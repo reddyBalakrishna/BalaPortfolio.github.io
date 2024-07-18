@@ -163,7 +163,7 @@ section ul li {
     justify-content: center;
     gap: 2em;
     flex-wrap: wrap;
-    height: 550px;
+    height: 520px;
 }
 
 .project, .experience {
