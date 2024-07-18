@@ -1,5 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     showSection('home'); // Show the "home" section by default
+
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetSectionId = this.getAttribute('href').substring(1);
+            showSection(targetSectionId);
+
+            document.getElementById(targetSectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 });
 
 function showSection(sectionId) {
@@ -12,17 +25,20 @@ function showSection(sectionId) {
     document.getElementById(sectionId).classList.add('active');
 }
 
+
 // Smooth scrolling for internal links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        showSection(this.getAttribute('href').substring(1));
+        const targetSectionId = this.getAttribute('href').substring(1);
+        showSection(targetSectionId);
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        document.getElementById(targetSectionId).scrollIntoView({
             behavior: 'smooth'
         });
     });
 });
+
 
 // Contact form submission
 document.getElementById('contactForm').addEventListener('submit', function(e) {
